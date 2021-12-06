@@ -1,0 +1,22 @@
+{
+  "name": "natur_pur",
+  "version": "1.0.0",
+  "description": "Ausbildungsprojekt JV JB LS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ginsecurityx/Natur_Pur.git"
+  },
+  "author": "LSY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ginsecurityx/Natur_Pur/issues"
+  },
+  "homepage": "https://github.com/Ginsecurityx/Natur_Pur#readme",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}
