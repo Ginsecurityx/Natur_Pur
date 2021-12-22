@@ -1,0 +1,9 @@
+@include font-face('OpenSansSto-Light', 100);
+@include font-face('OpenSansSto-SemiBoldItalic', 400, italic);
+@include font-face('OpenSansSto-Bold', 600);
+
+$fontLight: 'OpenSansSto-Light', Verdana, Arial, sans-serif;
+$fontSemiBoldItalic: 'OpenSansSto-SemiBoldItalic', Verdana, Arial, sans-serif;
+$fontBold: 'OpenSansSto-Bold', Verdana, Arial, sans-serif;
+
+$root-font-size: 10px;
