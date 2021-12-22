@@ -1,0 +1,19 @@
+.header {
+
+     .logo{
+
+     }
+
+     .social-container {
+
+          .social-list {
+               display: flex;
+               margin: 0;
+
+               .social-icon {
+                    list-style-type: none;
+                    padding: 0 .5rem 0 .5rem;
+               }
+          }
+     }
+}

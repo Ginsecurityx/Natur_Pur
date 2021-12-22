@@ -2,6 +2,62 @@ body {
   background-color: green;
 }
 
+.header .social-container .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.header .social-container .social-list .social-icon {
+  list-style-type: none;
+  padding: 0 .5rem 0 .5rem;
+}
+
+.navigation .navigation-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.navigation nav.navigation-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  -webkit-clip-path: circle(15px at 100% 0);
+          clip-path: circle(15px at 100% 0);
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+  background-color: brown;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation nav.navigation-content .nav-list .nav-item {
+  list-style-type: none;
+}
+
+.navigation nav.navigation-content.open {
+  visibility: visible;
+  -webkit-clip-path: circle(200% at 100% 0);
+          clip-path: circle(200% at 100% 0);
+}
+
 article,
 aside,
 details,
@@ -238,5 +294,9 @@ input[type="checkbox"], input[type="radio"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=index.css.map */
