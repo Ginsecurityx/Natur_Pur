@@ -1,8 +1,19 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAC;EACG,KAAK,EAAE,GAAG;CAEd",
+    "mappings": "ACAA,AAAA,IAAI,CAAC;EACA,gBAAgB,EAAE,GAAG;CACzB",
     "sources": [
-        "../scss/index.scss"
+        "../scss/index.scss",
+        "../scss/pages/_home.scss",
+        "../scss/utils/_mixins.scss",
+        "../scss/utils/_variables.scss",
+        "../scss/layout/_footer.scss",
+        "../scss/layout/_grid.scss",
+        "../scss/layout/_header.scss",
+        "../scss/layout/_navigation.scss",
+        "../scss/components/_buttons.scss",
+        "../scss/components/_waves.scss",
+        "../scss/base/_normalize.scss",
+        "../scss/base/_typography.scss"
     ],
     "names": [],
     "file": "index.css"
