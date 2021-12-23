@@ -1,14 +1,51 @@
 .navigation {
 
      .navigation-button {
-          position: absolute;
+          position: fixed;
           top: 0;
           right: 0;
           margin: 1rem;
           padding: 1.5rem;
-          background-color: red;
+          background-color: $ci-color;
           border-radius: 50%;
           z-index: 99;
+               
+          .burger-item {
+               position: absolute;
+               width: 25px;
+               height: 3px;
+               background-color: $second-color;
+               transition: 500ms;
+               transform: translate(-50%, -50%);
+
+               &:nth-child(1) {
+                    top: 35%;
+                    
+                    &.active {
+                         transform: translate(-50%, 8px) rotate(45deg);
+                    }
+               }
+               
+               &:nth-child(2) {
+                    top: 50%;
+                    
+                    &.active {
+                         transform: translateX(-20px) scale(0);
+                    }
+               }
+               
+               &:nth-child(3) {
+                    top: 65%;
+                    
+                    &.active {
+                         transform: translate(-50%, -8px) rotate(-45deg);
+                    }
+               }
+          }
+
+          &:hover {
+               cursor: pointer;
+          }
      }
      
      nav.navigation-content{
@@ -19,8 +56,8 @@
           height: 100%;
           visibility: hidden;
           clip-path: circle(15px at 100% 0);
-          transition: 500ms ease;
-          background-color: brown;
+          transition: 500ms ease-in;
+          background-color: $second-color;
 
           display: flex;
           justify-content: center;

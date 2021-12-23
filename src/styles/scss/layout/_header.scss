@@ -1,18 +1,48 @@
 .header {
 
+     &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 292px;
+          background: url('../../assets/waves/header-welle-1200.png');
+          background-repeat: no-repeat
+          // background-size: contain;
+     }
+
      .logo{
 
      }
 
      .social-container {
-
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          
           .social-list {
                display: flex;
-               margin: 0;
-
+               margin: 1rem 6rem .5rem 6rem;
+               opacity: .7;
+               
                .social-icon {
+                    max-width: 2.5rem;
                     list-style-type: none;
                     padding: 0 .5rem 0 .5rem;
+               }
+
+               #instgram-icon {
+                    max-width: 3rem;
+               }
+     
+               &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 120px;
+                    height: 5px;
+                    width: 165px;
+                    background-color: $accent-color;
                }
           }
      }
