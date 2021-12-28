@@ -2,6 +2,7 @@
 
 body {
      background: $bg-color;
+     color: $second-color;
 }
 
 .barriere {
@@ -20,5 +21,19 @@ body {
 @media only screen and (max-width: 1200px) {
      .barriere {
           display: none;
+     }
+}
+
+.introduction {
+     &-headline {
+          h1 {
+               text-align: center;
+          }
+     }
+
+     &-img {
+          img {
+               max-width: 100%;
+          }
      }
 }
