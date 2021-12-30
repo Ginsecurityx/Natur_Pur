@@ -1,0 +1,39 @@
+@import "../utils/variables";
+
+body {
+     background: $bg-color;
+     color: $second-color;
+}
+
+.barriere {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 100;
+     background: $main-color;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+     .barriere {
+          display: none;
+     }
+}
+
+.introduction {
+     &-headline {
+          h1 {
+               text-align: center;
+          }
+     }
+
+     &-img {
+          img {
+               max-width: 100%;
+          }
+     }
+}
