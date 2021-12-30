@@ -18,5 +18,4 @@ window.onload = function() {
           bar2.classList.toggle("active");
           bar3.classList.toggle("active");
      };
-
 }

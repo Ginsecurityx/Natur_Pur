@@ -1,5 +1,6 @@
 .header {
 
+     
      &::before {
           content: '';
           position: absolute;
@@ -7,15 +8,18 @@
           width: 100%;
           height: 292px;
           background: url('../../assets/waves/header-welle-1200.png');
-          background-repeat: no-repeat
+          background-repeat: no-repeat;
           // background-size: contain;
+          z-index: 97;
      }
-
+     
      .logo{
-
+          z-index: 97;
+          
      }
-
+     
      .social-container {
+          z-index: 97;
           position: relative;
           display: flex;
           justify-content: flex-end;
@@ -49,6 +53,7 @@
 
      &-img{
           width: 100%;
+          transform: translateY(-50px);
 
           img {
                max-width: 100%;

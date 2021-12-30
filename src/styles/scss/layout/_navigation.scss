@@ -9,7 +9,7 @@
           background-color: $ci-color;
           border-radius: 50%;
           z-index: 99;
-               
+          
           .burger-item {
                position: absolute;
                width: 25px;
@@ -17,7 +17,7 @@
                background-color: $second-color;
                transition: 500ms;
                transform: translate(-50%, -50%);
-
+               
                &:nth-child(1) {
                     top: 35%;
                     
@@ -42,14 +42,15 @@
                     }
                }
           }
-
+          
           &:hover {
                cursor: pointer;
           }
      }
      
      nav.navigation-content{
-          position: absolute;
+          z-index: 98;
+          position: fixed;
           top: 0;
           right: 0;
           width: 100%;
@@ -67,7 +68,13 @@
 
                .nav-item {
                     list-style-type: none;
+                    color: $main-color;
                }
+          }
+          .nav-infos {
+          
+               list-style-type: none;
+               color: $main-color;
           }
 
           &.open {
