@@ -1,6 +1,5 @@
 .header {
 
-     
      &::before {
           content: '';
           position: absolute;
@@ -12,22 +11,36 @@
           // background-size: contain;
           z-index: 97;
      }
-     
+
      .logo{
+          position: relative;
           z-index: 97;
-          
+
+          &::before {
+               content: '';
+               background: url('../../assets/logo/Logo_cmyk.svg');
+               background-repeat: no-repeat;
+               position: absolute;
+               top: 1rem;
+               left: 0;
+               height: 200px;
+               width: 200px;
+               z-index: 100;
+          }
      }
-     
+
      .social-container {
           z-index: 97;
-          position: relative;
           display: flex;
+          position: relative;
           justify-content: flex-end;
 
           .social-list {
+               position: relative;
                display: flex;
-               margin: 1rem 6rem .5rem 6rem;
+               margin: 1rem 0 .5rem 0;
                opacity: .7;
+               padding: 0;
 
                .social-icon {
                     max-width: 2.5rem;
@@ -46,12 +59,73 @@
                &::after {
                     content: '';
                     position: absolute;
-                    bottom: 0;
-                    right: 120px;
+                    bottom: -.625rem;
                     height: 5px;
-                    width: 165px;
+                    width: 100%;
                     background-color: $accent-color;
                }
+          }
+     }
+
+     .navigation-button {
+          position: fixed;
+          top: 0;
+          right: 0;
+          margin: 1rem;
+          padding: 1.5rem;
+          background-color: $ci-color;
+          border-radius: 50%;
+          box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+          transition: $medium;
+          z-index: 99;
+
+          .burger-item {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               width: 25px;
+               height: 3px;
+               background-color: $second-color;
+               transition: $medium;
+               transform: translate(-50%, -50%);
+
+               &:nth-child(1) {
+                    top: 35%;
+                    transform: translate(-50%, 0);
+
+                    &.active {
+                         top: 50%;
+                         transform: translate(-50%) rotate(45*3deg);
+                    }
+               }
+
+               &:nth-child(2) {
+                    top: 50%;
+                    transform: translate(-50%, 0);
+
+                    &.active {
+                         transform: translateX(-20px) scale(0);
+                    }
+               }
+
+               &:nth-child(3) {
+                    top: 65%;
+                    transform: translate(-50%, 0);
+
+                    &.active {
+                         top: 50%;
+                         transform: translate(-50%) rotate(-45*3deg);
+                    }
+               }
+
+          }
+
+          &.active {
+               background-color: $main-color;
+          }
+
+          &:hover {
+               cursor: pointer;
           }
      }
 
