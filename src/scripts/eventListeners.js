@@ -17,5 +17,7 @@ window.onload = function() {
           bar1.classList.toggle("active");
           bar2.classList.toggle("active");
           bar3.classList.toggle("active");
+          navButton.classList.toggle("active");
      };
+
 }

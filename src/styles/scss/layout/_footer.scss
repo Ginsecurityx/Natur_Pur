@@ -1,0 +1,34 @@
+.footer-container {
+
+     .footer-inner {
+
+          &-top {
+               display: flex;
+               align-items: flex-end;
+               justify-content: space-between;
+
+               &-right {
+                    
+               }
+
+               &-left {
+
+               }
+          }
+
+          &-bottom {
+               text-align: center;
+               color: $main-color;
+               background-color: darken($color: $ci-color, $amount: 10%);
+               padding: .5rem 0;
+               
+               a {
+                    color: $main-color;
+                    transition: $medium;
+                    &:hover {
+                         color: $second-color;
+                    }
+               }
+          }
+     }
+}

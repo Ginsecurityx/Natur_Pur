@@ -8,6 +8,8 @@
           padding: 1.5rem;
           background-color: $ci-color;
           border-radius: 50%;
+          box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+          transition: $medium;
           z-index: 99;
           
           .burger-item {
@@ -15,14 +17,14 @@
                width: 25px;
                height: 3px;
                background-color: $second-color;
-               transition: 500ms;
+               transition: $medium;
                transform: translate(-50%, -50%);
                
                &:nth-child(1) {
                     top: 35%;
                     
                     &.active {
-                         transform: translate(-50%, 8px) rotate(45deg);
+                         transform: translate(-50%, 8px) rotate(45*3deg);
                     }
                }
                
@@ -38,14 +40,27 @@
                     top: 65%;
                     
                     &.active {
-                         transform: translate(-50%, -8px) rotate(-45deg);
+                         transform: translate(-50%, -8px) rotate(-45*3deg);
                     }
                }
+
           }
           
+          &.active {
+               background-color: $main-color;
+          }
+
           &:hover {
                cursor: pointer;
           }
+     }
+
+     .line-item {
+          background: $main-color;
+          height: 50%;
+          width: 5px;
+          border-radius: 50px;
+          //margin: 0 auto;
      }
      
      nav.navigation-content{
@@ -57,7 +72,7 @@
           height: 100%;
           visibility: hidden;
           clip-path: circle(15px at 100% 0);
-          transition: 500ms ease-in;
+          transition: $medium ease-in;
           background-color: $second-color;
 
           display: flex;
@@ -65,14 +80,18 @@
           align-items: center;
 
           .nav-list {
+               margin: 0 auto;
 
                .nav-item {
-                    list-style-type: none;
-                    color: $main-color;
+
+                    a {
+                         list-style-type: none;
+                         color: $main-color;
+                    }
                }
           }
           .nav-infos {
-          
+               margin: 0 auto;
                list-style-type: none;
                color: $main-color;
           }
