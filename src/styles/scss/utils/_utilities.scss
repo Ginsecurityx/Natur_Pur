@@ -1,0 +1,38 @@
+//colors
+$main-color: #e0e2a8;
+$second-color: #15241a;
+$ci-color: #a4c254;
+$accent-color: #eecf73;
+$bg-color: #faf0cc;
+
+// general colors
+$white: #FFFFFF;
+$black: #000000;
+$grey: #4c4c4c;
+$grey-medium: #b5b4b4;
+
+//transitions
+$fast: 200ms;
+$medium: 500ms;
+$slow: 1s;
+
+//viewport begrenzung
+.barriere {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 100;
+     background: $main-color;
+     color: $second-color;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+     .barriere {
+          display: none;
+     }
+}
