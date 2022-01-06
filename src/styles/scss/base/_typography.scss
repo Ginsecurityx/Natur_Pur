@@ -1,14 +1,36 @@
+$h1-font-size: 2.8rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+$bembo-font-size: 3rem;
+
+$regular-font-size: 1.1rem;
+$regular-line-height: 1.8rem;
+
+$font-sourcesansRegular: 'sourcesansRegular';
+$font-sourcesansSemiBold: 'sourcesansSemiBold';
+$font-sourcesansBold: 'sourcesansBold';
+$font-sourcesansBlack: 'sourcesansBlack';
+$font-bembo: 'bembo';
+
 h1,
+h2,
 h3,
 h4 {
-     font-family: 'sourcesansRegular';
+     font-family: $font-sourcesansSemiBold;
 }
 
 h5 {
-     font-family: 'bembo';
+     font-family: $font-bembo;
+     font-size: $bembo-font-size !important;
 }
 
 a {
      text-decoration: none;
-     font-family: 'sourcesansBold';
+}
+
+.text {
+     font-family: $font-sourcesansRegular;
+     font-size: $regular-font-size;
+     line-height: $regular-line-height;
 }

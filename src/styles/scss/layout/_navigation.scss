@@ -1,68 +1,5 @@
 .navigation {
 
-     .navigation-button {
-          position: fixed;
-          top: 0;
-          right: 0;
-          margin: 1rem;
-          padding: 1.5rem;
-          background-color: $ci-color;
-          border-radius: 50%;
-          box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-          transition: $medium;
-          z-index: 99;
-          
-          .burger-item {
-               position: absolute;
-               width: 25px;
-               height: 3px;
-               background-color: $second-color;
-               transition: $medium;
-               transform: translate(-50%, -50%);
-               
-               &:nth-child(1) {
-                    top: 35%;
-                    
-                    &.active {
-                         transform: translate(-50%, 8px) rotate(45*3deg);
-                    }
-               }
-               
-               &:nth-child(2) {
-                    top: 50%;
-                    
-                    &.active {
-                         transform: translateX(-20px) scale(0);
-                    }
-               }
-               
-               &:nth-child(3) {
-                    top: 65%;
-                    
-                    &.active {
-                         transform: translate(-50%, -8px) rotate(-45*3deg);
-                    }
-               }
-
-          }
-          
-          &.active {
-               background-color: $main-color;
-          }
-
-          &:hover {
-               cursor: pointer;
-          }
-     }
-
-     .line-item {
-          background: $main-color;
-          height: 50%;
-          width: 5px;
-          border-radius: 50px;
-          //margin: 0 auto;
-     }
-     
      nav.navigation-content{
           z-index: 98;
           position: fixed;
@@ -79,21 +16,69 @@
           justify-content: center;
           align-items: center;
 
+          &::before {
+               content: '';
+               background: url('../../assets/logo/logo-menu-open.svg');
+               position: absolute;
+               background-repeat: no-repeat;
+               width: 8.125rem;
+               height: 6.125rem;
+               top: 1rem;
+               left: calc(100% / 12);
+          }
+
+          &::after {
+               content: '';
+               background: url('../../assets/pictures/vogel.svg');
+               background-repeat: no-repeat;
+               position: absolute;
+               bottom: -5rem;
+               right: -10.625rem;
+               transform: rotate(25deg);
+               opacity: .3;
+               width: 50%;
+               height: 50%;
+          }
+
+          .navigation-content-inner {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+          }
+
           .nav-list {
-               margin: 0 auto;
+               padding: 0;
+               width: 45%;
 
                .nav-item {
 
                     a {
+                         font-family: $font-sourcesansBlack;
+                         font-size: 4.5rem;
                          list-style-type: none;
-                         color: $main-color;
+                         color: transparent;
+                         -webkit-text-stroke-width: .1rem;
+                         -webkit-text-stroke-color: $main-color;
+
+                         &:hover {
+                              color: $main-color;
+                              -webkit-text-stroke-width: 0;
+                         }
                     }
                }
           }
+
+          .line-item {
+               background: $main-color;
+               height: 500px;
+               width: 5px;
+               border-radius: 50px;
+          }
+
           .nav-infos {
-               margin: 0 auto;
                list-style-type: none;
                color: $main-color;
+               width: 45%;
           }
 
           &.open {
@@ -101,6 +86,4 @@
                clip-path: circle(200% at 100% 0);
           }
      }
-
-
 }

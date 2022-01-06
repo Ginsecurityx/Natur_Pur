@@ -1,14 +1,29 @@
 @font-face {
     font-family: 'sourcesansRegular';
     src: url(../../assets/fonts/source-sans/SourceSansPro-Regular.woff);
+    src: url(../../assets/fonts/source-sans/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'sourcesansSemiBold';
+    src: url(../../assets/fonts/source-sans/SourceSansPro-SemiBold.woff);
+    src: url(../../assets/fonts/source-sans/SourceSansPro-SemiBold.ttf);
 }
 
 @font-face {
     font-family: 'sourcesansBold';
-    src: url(../../assets/fonts/source-sans/SourceSansPro-SemiBold.woff);
+    src: url(../../assets/fonts/source-sans/SourceSansPro-Bold.woff);
+    src: url(../../assets/fonts/source-sans/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'sourcesansBlack';
+    src: url(../../assets/fonts/source-sans/SourceSansPro-Black.woff);
+    src: url(../../assets/fonts/source-sans/SourceSansPro-Black.ttf);
 }
 
 @font-face {
     font-family: 'bembo';
     src: url(../../assets/fonts/bembo/BemboStd.woff);
+    src: url(../../assets/fonts/bembo/BemboStd.ttf);
 }

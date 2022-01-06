@@ -16,16 +16,12 @@
           position: relative;
           z-index: 97;
 
-          &::before {
-               content: '';
-               background: url('../../assets/logo/Logo_cmyk.svg');
-               background-repeat: no-repeat;
+          img {
                position: absolute;
                top: 1rem;
                left: 0;
-               height: 200px;
-               width: 200px;
-               z-index: 100;
+               height: auto;
+               width: 12.5rem;
           }
      }
 
