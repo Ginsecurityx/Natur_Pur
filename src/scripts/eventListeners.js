@@ -8,6 +8,7 @@ window.onload = function() {
      const bar3 = document.getElementById('burger-bar-3')
      
      navButton.onclick = function(){navToggle()};
+     window.onscroll = function(){navClose()};
      
      function navToggle(){
           //toggle nav
@@ -19,5 +20,18 @@ window.onload = function() {
           bar3.classList.toggle("active");
           navButton.classList.toggle("active");
      };
+     
+     function navClose(){
+          //close nav onscroll
+          nav.classList.remove("open");
+
+          //remove classes onscroll
+          bar1.classList.remove("active");
+          bar2.classList.remove("active");
+          bar3.classList.remove("active");
+          navButton.classList.remove("active");
+     };
+
+     
 
 }
