@@ -1,7 +1,9 @@
 .border {
-    width: 15%;
+    width: 150px;
     height: 3px;
     display: block;
-    margin: 0 auto;
     background: $accent-color;
+}
+.middle {
+    margin: 0 auto;
 }
