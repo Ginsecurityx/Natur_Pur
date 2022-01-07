@@ -105,6 +105,7 @@ a {
 .home-page {
   background: #faf0cc;
   color: #15241a;
+  overflow-x: hidden;
 }
 
 .introduction-headline h1 {
