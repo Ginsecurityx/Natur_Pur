@@ -1,0 +1,35 @@
+.button {
+
+     button {
+          background-color: $ci-color;
+          color: $main-color;
+          border: 2.5px solid $main-color;
+          border-radius: 15px;
+          padding: .5rem 3rem;
+
+          .arrow {
+               position: relative;
+
+               &-line {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 25px;
+                    height: 3px;
+                    background-color: $second-color;
+                    transition: $medium;
+                    transform: translate(0, -50%);
+
+                    &:nth-child(1){
+                         top: 35%;
+                         transform: translate(-50%, 0);
+                    }
+                    &:nth-child(2){
+                         top: 65%;
+                         transform: translate(-50%, 0);
+                    }
+               }
+          }
+
+     }
+}

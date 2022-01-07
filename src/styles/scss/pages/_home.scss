@@ -16,3 +16,50 @@
           }
      }
 }
+
+.aktuelles-container {
+     position: relative;
+     width: 100%;
+     background-color: $second-color;
+     color: $main-color;
+     margin: 5rem 0;
+
+     .aktuelles-headline {
+          text-align: center;
+     }
+
+     .aktuelles-text{
+
+          .border {
+               margin: 0;
+          }
+     }
+
+     .aktuelles-image {
+
+          img {
+               max-width: 40rem;
+          }
+     }
+
+     &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 80px;
+          transform: translateY(-99%);
+          background-image: url('../../assets/waves/5-sinne-really-oben-1200.png');
+          background-repeat: no-repeat;
+     }
+     
+     &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 100px;
+          transform: translateY(99%);
+          background-image: url('../../assets/waves/5-sinne-really-unten-1200.png');
+     }
+}

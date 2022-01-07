@@ -51,18 +51,19 @@
                width: 45%;
 
                .nav-item {
+                    list-style-type: none;
 
                     a {
                          font-family: $font-sourcesansBlack;
                          font-size: 4.5rem;
-                         list-style-type: none;
                          color: transparent;
                          -webkit-text-stroke-width: .1rem;
                          -webkit-text-stroke-color: $main-color;
+                         transition: $medium;
 
                          &:hover {
                               color: $main-color;
-                              -webkit-text-stroke-width: 0;
+                              // -webkit-text-stroke-width: 0;
                          }
                     }
                }
