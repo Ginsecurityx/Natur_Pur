@@ -21,6 +21,13 @@
                transform: translateX(-20%);
           }
      }
+     
+     &-text {
+          
+          &_quotes {
+               transform: translateX($one-column);
+          }
+     }
 }
 
 .aktuelles-container {

@@ -18,6 +18,9 @@ $fast: 200ms;
 $medium: 500ms;
 $slow: 1s;
 
+//calculations
+$one-column: calc(-100% / 4);
+
 //viewport begrenzung
 .barriere {
      position: fixed;
