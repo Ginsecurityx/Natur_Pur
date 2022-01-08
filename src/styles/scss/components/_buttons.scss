@@ -1,4 +1,4 @@
-.button {
+.button-dark {
 
      button {
           position: relative;
@@ -44,19 +44,6 @@
                transform: translateX(-100%);
           }
           
-          // &::after {
-          //      content: '';
-          //      position: absolute;
-          //      top: 0;
-          //      bottom: 0;
-          //      left: 0;
-          //      right: 0;
-          //      border: 2.5px solid $ci-color;
-          //      border-radius: 10px;
-          //      background-color: transparent;
-          //      z-index: 1;
-          // }
-          
           &:hover {
                color: $second-color;
                
@@ -67,6 +54,69 @@
 
                .arrow {
                     border: solid $second-color;
+                    border-width: 0 2px 2px 0;
+                    transform: translate(10px, -50%) rotate(-45deg);
+               }
+          }
+     }
+}
+
+.button-light {
+
+     button {
+          position: relative;
+          background-color: transparent;
+          color: $second-color;
+          border: 2.5px solid transparent;
+          border-radius: 15px;
+          padding: .5rem 3rem;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          box-shadow: inset 0px 0px 0px 2.5px $second-color;
+          
+          transition: $fast ease-out;
+          z-index: 5;
+          overflow: hidden;
+
+          .arrow {
+               position: absolute;
+               top: 50%;
+               left: 1rem;
+               
+               border: solid $second-color;
+               border-width: 0 2px 2px 0;
+               padding: 3px;
+               transform: translate(0, -50%) rotate(-45deg);
+               transition: $medium ease-out;
+          }
+          
+          &::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               right: 0;
+               border: 2.5px solid transparent;
+               background-color: $second-color;
+               z-index: -1;
+               transition: $fast ease-out;
+               transform: translateX(-100%);
+          }
+
+          &:hover {
+               color: $main-color;
+               
+               &::before {
+                    transform: translateX(0);
+
+               }
+
+               .arrow {
+                    border: solid $main-color;
                     border-width: 0 2px 2px 0;
                     transform: translate(10px, -50%) rotate(-45deg);
                }
