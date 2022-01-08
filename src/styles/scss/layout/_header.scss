@@ -1,3 +1,5 @@
+$header-top-margin: 1.5rem;
+
 .header {
 
      &::before {
@@ -18,7 +20,7 @@
 
           img {
                position: absolute;
-               top: 1rem;
+               top: $header-top-margin;
                left: 0;
                height: auto;
                width: 12.5rem;
@@ -34,7 +36,7 @@
           .social-list {
                position: relative;
                display: flex;
-               margin: 1rem 0 .5rem 0;
+               margin: $header-top-margin 0 .5rem 0;
                opacity: .7;
                padding: 0;
 
@@ -63,7 +65,7 @@
           position: fixed;
           top: 0;
           right: 0;
-          margin: 1rem;
+          margin: $header-top-margin 1rem 1rem;
           padding: 1.5rem;
           background-color: $ci-color;
           border-radius: 50%;
