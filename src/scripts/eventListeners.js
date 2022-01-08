@@ -31,7 +31,4 @@ window.onload = function() {
           bar3.classList.remove("active");
           navButton.classList.remove("active");
      };
-
-     
-
 }

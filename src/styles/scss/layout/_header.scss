@@ -36,7 +36,7 @@ $header-top-margin: 1.5rem;
           .social-list {
                position: relative;
                display: flex;
-               margin: $header-top-margin 0 .5rem 0;
+               margin: 1.75rem 0 .5rem 0;
                opacity: .7;
                padding: 0;
 
@@ -44,6 +44,10 @@ $header-top-margin: 1.5rem;
                     width: 2.5rem;
                     list-style-type: none;
                     padding: 0 .5rem 0 .5rem;
+
+                    &:first-child {
+                         padding: 0 0 0 .5rem;
+                    }
 
                     &:hover {
                          cursor: pointer;
