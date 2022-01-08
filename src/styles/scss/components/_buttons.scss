@@ -7,6 +7,12 @@
           border: 2.5px solid transparent;
           border-radius: 15px;
           padding: .5rem 3rem;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          box-shadow: inset 0px 0px 0px 2.5px $ci-color;
           
           transition: $fast ease-out;
           z-index: 5;
@@ -18,8 +24,8 @@
                left: 1rem;
                
                border: solid $ci-color;
-               border-width: 0 3px 3px 0;
-               padding: 5px;
+               border-width: 0 2px 2px 0;
+               padding: 3px;
                transform: translate(0, -50%) rotate(-45deg);
                transition: $medium ease-out;
           }
@@ -38,18 +44,18 @@
                transform: translateX(-100%);
           }
           
-          &::after {
-               content: '';
-               position: absolute;
-               top: 0;
-               bottom: 0;
-               left: 0;
-               right: 0;
-               border: 2.5px solid $ci-color;
-               border-radius: 10px;
-               background-color: transparent;
-               z-index: 1;
-          }
+          // &::after {
+          //      content: '';
+          //      position: absolute;
+          //      top: 0;
+          //      bottom: 0;
+          //      left: 0;
+          //      right: 0;
+          //      border: 2.5px solid $ci-color;
+          //      border-radius: 10px;
+          //      background-color: transparent;
+          //      z-index: 1;
+          // }
           
           &:hover {
                color: $second-color;
@@ -61,7 +67,7 @@
 
                .arrow {
                     border: solid $second-color;
-                    border-width: 0 3px 3px 0;
+                    border-width: 0 2px 2px 0;
                     transform: translate(10px, -50%) rotate(-45deg);
                }
           }

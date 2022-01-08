@@ -558,17 +558,13 @@ a {
 }
 
 .header .social-container .social-list .social-icon {
-  max-width: 2.5rem;
+  width: 2.5rem;
   list-style-type: none;
   padding: 0 .5rem 0 .5rem;
 }
 
 .header .social-container .social-list .social-icon:hover {
   cursor: pointer;
-}
-
-.header .social-container .social-list #instgram-icon {
-  max-width: 3rem;
 }
 
 .header .social-container .social-list::after {
@@ -771,6 +767,17 @@ a {
   border: 2.5px solid transparent;
   border-radius: 15px;
   padding: .5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: inset 0px 0px 0px 2.5px #a4c254;
+          box-shadow: inset 0px 0px 0px 2.5px #a4c254;
   -webkit-transition: 200ms ease-out;
   transition: 200ms ease-out;
   z-index: 5;
@@ -782,8 +789,8 @@ a {
   top: 50%;
   left: 1rem;
   border: solid #a4c254;
-  border-width: 0 3px 3px 0;
-  padding: 5px;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
   -webkit-transform: translate(0, -50%) rotate(-45deg);
           transform: translate(0, -50%) rotate(-45deg);
   -webkit-transition: 500ms ease-out;
@@ -806,19 +813,6 @@ a {
           transform: translateX(-100%);
 }
 
-.button button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 2.5px solid #a4c254;
-  border-radius: 10px;
-  background-color: transparent;
-  z-index: 1;
-}
-
 .button button:hover {
   color: #15241a;
 }
@@ -830,7 +824,7 @@ a {
 
 .button button:hover .arrow {
   border: solid #15241a;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   -webkit-transform: translate(10px, -50%) rotate(-45deg);
           transform: translate(10px, -50%) rotate(-45deg);
 }
