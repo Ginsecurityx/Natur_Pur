@@ -41,7 +41,7 @@
 
           .navigation-content-inner {
                display: flex;
-               align-items: center;
+               align-items: stretch;
                justify-content: space-between;
           }
 
@@ -76,9 +76,17 @@
           }
 
           .nav-infos {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: center;
                list-style-type: none;
                color: $main-color;
                width: 45%;
+
+               .menu-anfahrt,
+               .open-times {
+                    width: 100%;
+               }
           }
 
           &.open {
