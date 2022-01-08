@@ -29,22 +29,45 @@
           
           &-bottom {
                text-align: center;
-               color: $main-color;
-               background-color: darken($color: $ci-color, $amount: 10%);
+               color: $second-color;
+               background-color: $main-color;
                padding: .5rem 0;
 
                &-wrapper {
                     display: flex;
                     justify-content: space-between;
-               }
 
-               a {
-                    color: $main-color;
-                    transition: $medium;
-                    &:hover {
-                         color: $second-color;
+                    .contact {
+                         overflow: hidden;
+
+                         a {
+                              color: $second-color;
+                              transition: $medium;
+                              position: relative;
+                              
+                              &::after {  
+                                   content: '';
+                                   position: absolute;
+                                   left: 0;
+                                   bottom: -.25rem;
+                                   height: 2px;
+                                   width: 100%;
+                                   background-color: $second-color;
+                                   transform: translateX(-101%);
+                                   transition: $medium;
+                              }
+                              
+                              &:hover {
+                                   
+                                   &::after {
+                                        transform: translateX(0);
+
+                                   } 
+                              }
+                         }
                     }
                }
+
           }
      }
 }
