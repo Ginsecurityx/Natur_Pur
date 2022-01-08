@@ -13,7 +13,7 @@
           align-items: center;
 
           box-shadow: inset 0px 0px 0px 2.5px $ci-color;
-          
+
           transition: $fast ease-out;
           z-index: 5;
           overflow: hidden;
@@ -22,14 +22,14 @@
                position: absolute;
                top: 50%;
                left: 1rem;
-               
+
                border: solid $ci-color;
                border-width: 0 2px 2px 0;
                padding: 3px;
                transform: translate(0, -50%) rotate(-45deg);
                transition: $medium ease-out;
           }
-          
+
           &::before {
                content: '';
                position: absolute;
@@ -43,10 +43,10 @@
                transition: $fast ease-out;
                transform: translateX(-100%);
           }
-          
+
           &:hover {
                color: $second-color;
-               
+
                &::before {
                     transform: translateX(0);
 
@@ -76,7 +76,7 @@
           align-items: center;
 
           box-shadow: inset 0px 0px 0px 2.5px $second-color;
-          
+
           transition: $fast ease-out;
           z-index: 5;
           overflow: hidden;
@@ -85,15 +85,15 @@
                position: absolute;
                top: 50%;
                left: 1rem;
-               
+
                border: solid $second-color;
                border-width: 0 2px 2px 0;
                padding: 3px;
                transform: translate(0, -50%) rotate(-45deg);
                transition: $medium ease-out;
           }
-          
-          
+
+
           &::before {
                content: '';
                position: absolute;
@@ -110,7 +110,7 @@
 
           &:hover {
                color: $main-color;
-               
+
                &::before {
                     transform: translateX(0);
 

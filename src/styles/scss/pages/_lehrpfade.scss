@@ -1,4 +1,35 @@
 .lehrpfade-page {
      background: $second-color;
      color: $main-color;
+     overflow-x: hidden;
+}
+
+.l-introduction {
+     &-headline {
+          text-align: center;
+     }
+
+     &-img {
+          img {
+               max-width: 125%;
+          }
+     }
+
+     &-text {
+          display: flex;
+          flex-wrap: wrap;
+     }
+}
+
+.l-benefits {
+     &-img {
+          img {
+               max-width: 100%;
+          }
+     }
+
+     &-text {
+          display: flex;
+          flex-wrap: wrap;
+     }
 }
