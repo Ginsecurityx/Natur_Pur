@@ -49,15 +49,6 @@ $header-top-margin: 1.5rem;
                          cursor: pointer;
                     }
                }
-
-               &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -.625rem;
-                    height: 5px;
-                    width: 100%;
-                    background-color: $accent-color;
-               }
           }
      }
 
