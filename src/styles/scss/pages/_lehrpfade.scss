@@ -5,6 +5,9 @@
 }
 
 .l-introduction {
+     position: relative;
+     margin-bottom: 7rem;
+
      &-headline {
           text-align: center;
      }
@@ -19,6 +22,16 @@
           display: flex;
           flex-wrap: wrap;
      }
+
+     &::after {
+          content: '';
+          background: url('../../assets/waves/lehrpfade-introduction.png');
+          position: absolute;
+          bottom: 0;
+          transform: translateY(95%);
+          height: 160px;
+          width: 100%;
+     }
 }
 
 .l-benefits {
@@ -31,5 +44,10 @@
      &-text {
           display: flex;
           flex-wrap: wrap;
+     }
+}
+.l-ralleytext {
+     &-headline {
+          text-align: center;
      }
 }
