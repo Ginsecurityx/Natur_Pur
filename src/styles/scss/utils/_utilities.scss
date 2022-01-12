@@ -18,6 +18,12 @@ $fast: 200ms;
 $medium: 500ms;
 $slow: 1s;
 
+//breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
 //calculations
 $one-column: calc(-100% / 4);
 

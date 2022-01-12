@@ -9,16 +9,31 @@
      margin-bottom: 7rem;
 
      &-headline {
+          margin-bottom: 3rem;
+          order: 1;
           text-align: center;
      }
 
      &-img {
+          display: flex;
+          align-items: center;
+          order: 2;
+
           img {
-               max-width: 125%;
+               max-width: 100%;
+          }
+
+          @media all and (min-width: $breakpoint-medium) {
+               order: 4;
+
+               img {
+                    max-width: 125%;
+               }
           }
      }
 
      &-text {
+          order: 3;
           display: flex;
           flex-wrap: wrap;
      }
@@ -35,7 +50,12 @@
 }
 
 .l-benefits {
+     padding: 8rem 0 5rem;
+
      &-img {
+          display: flex;
+          align-items: center;
+
           img {
                max-width: 100%;
           }
@@ -48,6 +68,7 @@
 }
 .l-ralleytext {
      &-headline {
+          margin-bottom: 3rem;
           text-align: center;
      }
 }

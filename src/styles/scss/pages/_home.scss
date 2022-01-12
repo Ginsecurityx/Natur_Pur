@@ -6,7 +6,9 @@
 
 
 .introduction {
+     padding: 0 0 5rem;
      &-headline {
+          margin-bottom: 3rem;
           h1 {
                text-align: center;
           }
@@ -17,15 +19,34 @@
           align-items: center;
 
           img {
-               max-width: 120%;
-               transform: translateX(-20%);
+               max-width: 100%;
+          }
+
+          @media all and (min-width: $breakpoint-large) {
+               img {
+                    max-width: 120%;
+                    transform: translateX(-20%);
+               }
           }
      }
-     
+
      &-text {
-          
+
           &_quotes {
-               transform: translateX($one-column);
+               position: relative;
+
+               .quote-left {
+                    content: '';
+                    background: url('../../assets/icons/quote.svg');
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+               }
+
+               @media all and (min-width: $breakpoint-large) {
+                    transform: translateX($one-column);
+               }
           }
      }
 }
@@ -36,24 +57,33 @@
      background-color: $second-color;
      color: $main-color;
      margin: 5rem 0 0;
+     padding: 3rem 0 4rem;
 
      .aktuelles-headline {
           text-align: center;
+          order: 1;
      }
 
      .aktuelles-text{
           margin-top: 3rem;
+          order: 3;
           .border {
                margin: 0;
           }
      }
 
      .aktuelles-image {
+          padding: 3rem 0 0;
           display: flex;
           align-items: center;
+          order: 2;
 
           img {
                max-width: 125%;
+          }
+
+          @media all and (min-width: $breakpoint-medium) {
+               order: 4;
           }
      }
 
@@ -81,6 +111,8 @@
      }
 
      &-img {
+          display: flex;
+          align-items: center;
           img {
                max-width: 110%;
           }
@@ -89,9 +121,9 @@
      &::before {
           content: '';
           position: absolute;
-          top: -0.0625rem;
+          top: -0.125rem;
           width: 100%;
-          height: 100px;
+          height: 102px;
           transform: translateY(0);
           background-image: url('../../assets/waves/5-sinne-really-unten-1200.png');
      }
@@ -109,7 +141,9 @@
 
 .informationen {
      margin-bottom: 8rem;
+     padding: 8rem 0;
      &-headline {
+          margin-bottom: 3rem;
           h2 {
                text-align: center;
           }
@@ -118,9 +152,12 @@
      &-text {
           display: flex;
           align-items: center;
+          justify-content: center;
      }
 
      &-img {
+          display: flex;
+          align-items: center;
           img {
                max-width: 100%;
           }
@@ -151,10 +188,15 @@
      }
 
      &-img {
-          z-index: 1;
-          img {
-               max-width: 140%;
-               margin-top: -10rem;
+          display: none;
+
+          @media all and (min-width: $breakpoint-medium) {
+               display: block;
+               z-index: 1;
+               img {
+                    max-width: 140%;
+                    margin-top: -10rem;
+               }
           }
      }
 
@@ -171,7 +213,7 @@
 
 .anfahrt {
      background-color: $main-color;
-     margin-top: -16%;
+     margin-top: -16% !important;
 
      &-infos {
           position: relative;

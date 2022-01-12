@@ -11,7 +11,7 @@
                height: 450px;
                color: $main-color;
                z-index: 3;
-               
+
                &::before {
                     content: '';
                     background: url('../../assets/pictures/footer-forest.png');
@@ -21,12 +21,12 @@
                     z-index: -2;
                     bottom: 0;
                }
-               
+
                &-right, &-left {
                     margin-bottom: 3.5rem;
                }
           }
-          
+
           &-bottom {
                text-align: center;
                color: $second-color;
@@ -44,8 +44,8 @@
                               color: $second-color;
                               transition: $medium;
                               position: relative;
-                              
-                              &::after {  
+
+                              &::after {
                                    content: '';
                                    position: absolute;
                                    left: 0;
@@ -56,13 +56,13 @@
                                    transform: translateX(-101%);
                                    transition: $medium;
                               }
-                              
+
                               &:hover {
-                                   
+
                                    &::after {
                                         transform: translateX(0);
 
-                                   } 
+                                   }
                               }
                          }
                     }

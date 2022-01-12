@@ -7,8 +7,9 @@ $header-top-margin: 1.5rem;
           position: absolute;
           top: 0;
           width: 100%;
-          height: 292px;
+          height: 100%;
           background: url('../../assets/waves/header-welle-1200.png');
+          background-size: 100%;
           background-repeat: no-repeat;
           // background-size: contain;
           z-index: 97;
@@ -23,34 +24,38 @@ $header-top-margin: 1.5rem;
                top: $header-top-margin;
                left: 0;
                height: auto;
-               width: 12.5rem;
+               width: 22%;
           }
      }
 
      .social-container {
-          z-index: 97;
-          display: flex;
-          position: relative;
-          justify-content: flex-end;
+          display: none;
 
-          .social-list {
-               position: relative;
+          @media all and (min-width: $breakpoint-medium) {
+               z-index: 97;
                display: flex;
-               margin: 1.75rem 0 .5rem 0;
-               opacity: .7;
-               padding: 0;
+               position: relative;
+               justify-content: flex-end;
 
-               .social-icon {
-                    width: 2.5rem;
-                    list-style-type: none;
-                    padding: 0 .5rem 0 .5rem;
+               .social-list {
+                    position: relative;
+                    display: flex;
+                    margin: 1.75rem 0 .5rem 0;
+                    opacity: .7;
+                    padding: 0;
 
-                    &:first-child {
-                         padding: 0 0 0 .5rem;
-                    }
+                    .social-icon {
+                         width: 2.5rem;
+                         list-style-type: none;
+                         padding: 0 .5rem 0 .5rem;
 
-                    &:hover {
-                         cursor: pointer;
+                         &:first-child {
+                              padding: 0 0 0 .5rem;
+                         }
+
+                         &:hover {
+                              cursor: pointer;
+                         }
                     }
                }
           }

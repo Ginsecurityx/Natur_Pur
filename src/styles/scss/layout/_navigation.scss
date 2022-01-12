@@ -31,8 +31,8 @@
                background: url('../../assets/pictures/vogel.svg');
                background-repeat: no-repeat;
                position: absolute;
-               bottom: -5rem;
-               right: -10.625rem;
+               bottom: -9rem;
+               right: -6.625rem;
                transform: rotate(25deg);
                opacity: .3;
                width: 50%;
@@ -46,15 +46,22 @@
           }
 
           .nav-list {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: flex-start;
+               flex-wrap: wrap;
                padding: 0;
-               width: 45%;
+               width: 100%;
 
                .nav-item {
                     list-style-type: none;
+                    width: 100%;
+                    text-align: center;
 
                     a {
                          font-family: $font-sourcesansBlack;
-                         font-size: 4.5rem;
+                         font-size: 4rem;
                          color: transparent;
                          -webkit-text-stroke-width: .1rem;
                          -webkit-text-stroke-color: $main-color;
@@ -66,32 +73,56 @@
                          }
                     }
                }
+
+               @media all and (min-width: $breakpoint-large) {
+                    width: 45%;
+
+                    .nav-item {
+                         text-align: left;
+                    }
+               }
           }
 
           .line-item {
-               background: $main-color;
-               height: 500px;
-               width: 5px;
-               border-radius: 50px;
+               display: none;
+
+               @media all and (min-width: $breakpoint-large) {
+                    display: block;
+                    background: $main-color;
+                    height: 500px;
+                    width: 5px;
+                    border-radius: 50px;
+               }
           }
 
           .nav-infos {
-               display: flex;
-               flex-wrap: wrap;
-               align-items: center;
-               list-style-type: none;
-               color: $main-color;
-               width: 45%;
+               display: none;
 
-               .menu-anfahrt,
-               .open-times {
-                    width: 100%;
+               @media all and (min-width: $breakpoint-large) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    list-style-type: none;
+                    color: $main-color;
+                    width: 45%;
+
+                    .menu-anfahrt,
+                    .open-times {
+                         width: 100%;
+                    }
                }
           }
 
           &.open {
                visibility: visible;
                clip-path: circle(200% at 100% 0);
+          }
+
+          @media all and (min-width: $breakpoint-large) {
+               &::after {
+                    bottom: -5rem;
+                    right: -10.625rem;
+               }
           }
      }
 }

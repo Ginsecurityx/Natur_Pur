@@ -11,14 +11,14 @@
 
      <div class="barriere">
           <div class="content">
-               <p>Diese Website ist Aufgrund von Prüfungsanforderungen nur für eine Viewport Breite von >1200px Entwickelt</p>
+               <p>Diese Website ist Aufgrund der Prüfungsanforderungen nur für eine Viewport Breite von >1200px Entwickelt</p>
                <p>Bitte das Fenter oder die Auflösung verkleinern</p>
           </div>
      </div>
 
-     <header class="header">
-          <div class="row">
-               <div class="col-10 col-offset-1">
+     <header class="header container">
+          <div class="container__row">
+               <div class="container__col-10 container__col-offset-1">
                     <div class="logo">
                          <a href="#" class="logo-link">
                               <img src="assets/logo/Logo_cmyk.svg" alt="logo">
@@ -51,9 +51,9 @@
                </div>
           </div>
           <div class="navigation">
-               <nav class="navigation-content" id="navigation">
-                    <div class="row">
-                         <div class="col-10 col-offset-1">
+               <nav class="navigation-content container" id="navigation">
+                    <div class="container__row">
+                         <div class="container__col-10 container__col-offset-1">
                               <div class="navigation-content-inner">
                                    <ul class="nav-list">
                                         <li class="nav-item">
@@ -85,9 +85,9 @@
                                         <div class="open-times">
                                              <h3>Öffnungszeiten</h3>
                                              <p>
-                                                  Museum NaturPur<br>
-                                                  Lange Bürgergasse 3,<br>
-                                                  99947 Bad Langensalza
+                                                  Dienstag - Freitag: 9 - 17 Uhr <br>
+                                                  Samstag, Sonn- und Feiertage: 10 - 17 Uhr, <br>
+                                                  Für Gruppen nach Absprache <br>
                                              </p>
                                         </div>
                                    </div>
@@ -101,39 +101,41 @@
           <div class="header-img">
                <img class="" src="./assets/pictures/header-img.jpg" alt="header">
           </div>
-          <section class="introduction row">
-               <div class="introduction-headline col-10 col-offset-1">
-                    <h1>Entdecken Sie den Lebensraum Wald in der Rosenstadt!</h1>
-                    <span class="border middle"></span>
-               </div>
-               <div class="introduction-img col-6">
-                    <img src="../src/assets/pictures/einleitung.png" alt="">
-               </div>
-               <div class="introduction-text col-4 col-offset-1 text">
-                    <div class="introduction-text_top">
-                         <p>
-                              Natürlich kennt jeder und jede in der Rosenstadt Bad Langensalza das Naturmuseum – zumindest aus der eigenen Schulzeit. Doch Jahr für Jahr lassen sich Direktor Richter und sein Team etwas Besonderes einfallen – und die Ehrenamtlichen um die Vereinsvorsitzende Haufe kümmern sich um die nötigen Finanzen.
-                         </p>
+          <section class="introduction container">
+               <div class="container__row">
+                    <div class="introduction-headline container__col-10 container__col-offset-1">
+                         <h1>Entdecken Sie den Lebensraum Wald in der Rosenstadt!</h1>
+                         <span class="border middle"></span>
                     </div>
-                    <div class="introduction-text_quotes">
-                         <h5>Erleben Sie Vögel und andere Waldbewohner!</h5>
+                    <div class="introduction-img container__col-6 container__col-offset-3 container__col-lg-offset-0">
+                         <img src="../src/assets/pictures/einleitung.png" alt="">
                     </div>
-                    <div class="introduction-text_bottom">
-                         <p>
-                              „Dank großzügiger Sponsoren können wir in der Waldausstellung jetzt ganz echte Sinneseindrücke vermitteln“, berichtet Sieglinde Haufe. „An der Riechstation lernen Sie den Duft von Pflanzen zu unterscheiden und an der Hörstation erleben Sie Vögel und andere Waldbewohner.“
-                         </p>
+                    <div class="introduction-text container__col-10 container__col-lg-4 container__col-offset-1 text">
+                         <div class="introduction-text_top">
+                              <p>
+                                   Natürlich kennt jeder und jede in der Rosenstadt Bad Langensalza das Naturmuseum – zumindest aus der eigenen Schulzeit. Doch Jahr für Jahr lassen sich Direktor Richter und sein Team etwas Besonderes einfallen – und die Ehrenamtlichen um die Vereinsvorsitzende Haufe kümmern sich um die nötigen Finanzen.
+                              </p>
+                         </div>
+                         <div class="introduction-text_quotes">
+                              <span class="quote-left"></span><h5>Erleben Sie Vögel und andere Waldbewohner!</h5><span class="quote-right"></span>
+                         </div>
+                         <div class="introduction-text_bottom">
+                              <p>
+                                   „Dank großzügiger Sponsoren können wir in der Waldausstellung jetzt ganz echte Sinneseindrücke vermitteln“, berichtet Sieglinde Haufe. „An der Riechstation lernen Sie den Duft von Pflanzen zu unterscheiden und an der Hörstation erleben Sie Vögel und andere Waldbewohner.“
+                              </p>
+                         </div>
                     </div>
                </div>
           </section>
-          <section class="aktuelles-container">
-               <div class="row">
-                    <div class="aktuelles-headline col-10 col-offset-1">
+          <section class="aktuelles-container container">
+               <div class="container__row">
+                    <div class="aktuelles-headline container__col-10 container__col-offset-1">
                          <h2>Aktuelles</h2>
                          <span class="border middle"></span>
                     </div>
                </div>
-               <div class="row">
-                    <div class="aktuelles-text text col-5 col-offset-1">
+               <div class="container__row">
+                    <div class="aktuelles-text text container__col-10 container__col-md-5 container__col-offset-1">
                          <h3>Die Neue 5 Sinne Ralley</h3>
                          <span class="border"></span>
                          <div class="aktuelles-text_top">
@@ -149,18 +151,18 @@
                               </button>
                          </div>
                     </div>
-                    <div class="aktuelles-image col-5 col-offset-1">
+                    <div class="aktuelles-image container__col-10 container__col-md-5 container__col-offset-2 container__col-md-offset-1">
                          <img src="../src/assets/pictures/5-sinne-really.png" alt="">
                     </div>
                </div>
           </section>
-          <section class="jahrestagung">
-               <div class="row">
-                    <div class="jahrestagung-headline col-10 col-offset-1">
+          <section class="jahrestagung container">
+               <div class="container__row">
+                    <div class="jahrestagung-headline container__col-10 container__col-offset-1">
                          <h3>Jahrestagung der Naturmuseen</h3>
                          <span class="border"></span>
                     </div>
-                    <div class="jahrestagung-text text col-4 col-offset-1">
+                    <div class="jahrestagung-text text container__col-10 container__col-md-4 container__col-offset-1">
                          <div class="jahrestagung-text-inner">
                               <p>Am 7. und 8. April 2022 findet im Museum Natur pur in Bad Langensalza die Jahrestagung der Naturmuseen im deutschsprachigen Raum statt.</p>
                               <p>Es gibt rund 150 Naturmuseen. Die meisten von ihnen sind klein und viele sind auf ein Thema spezialisiert. <br>
@@ -174,40 +176,40 @@
                               </div>
                          </div>
                     </div>
-                    <div class="jahrestagung-img col-6 col-offset-1">
+                    <div class="jahrestagung-img container__col-6 container__col-offset-3 container__col-md-offset-1">
                          <img src="../src/assets/pictures/jahrestagung.png" alt="Jahrestagung">
                     </div>
                </div>
           </section>
-          <section class="informationen">
-               <div class="row">
-                    <div class="informationen-headline col-10 col-offset-1">
+          <section class="informationen container">
+               <div class="container__row">
+                    <div class="informationen-headline container__col-10 container__col-offset-1">
                          <h2>informationen</h2>
                          <span class="border middle"></span>
                     </div>
-                    <div class="informationen-img col-5 col-offset-1">
+                    <div class="informationen-img container__col-6 container__col-md-5 container__col-offset-3 container__col-md-offset-1">
                          <img src="../src/assets/pictures/oeffnungszeiten.png" alt="">
                     </div>
-                    <div class="informationen-text text col-4 col-offset-1">
+                    <div class="informationen-text text container__col-10 container__col-md-4 container__col-offset-1">
                          <div class="informationen-text-inner">
                               <h3>Öffungszeiten</h3>
                               <span class="border"></span>
                               <p>Dienstag - Freitag: 9 - 17 Uhr <br>
                                    Samstag, Sonn- und Feiertage: 10 - 17 Uhr, <br>
-                                   Für Gruppen nach Absprache <br>
+                                   <strong>Für Gruppen nach Absprache</strong><br>
                                    geschlossen am 1. Januar, 1. Mai, <br>
                                    24. Dezember, 31. Dezember. </p>
                          </div>
                     </div>
                </div>
           </section>
-          <section class="preise">
-               <div class="row">
-                    <div class="preise-text col-5 col-offset-1">
+          <section class="preise container">
+               <div class=" container__row">
+                    <div class="preise-text container__col-10 container__col-md-5 container__col-offset-1">
                          <div class="preise-text-inner">
                               <h3>Eintrittspreise</h3>
                               <span class="border"></span>
-                              <div class="preise-icongroup">
+                              <div class="preise-icongroup text">
                                    <div class="preise-icongroup-item">
                                         <div class="preise-icongroup-icon">
                                              <img src="../src/assets/icons/preise-icons/user-thin.png" alt="">
@@ -224,7 +226,7 @@
                                         <div class="preise-icongroup-icon">
                                              <img src="../src/assets/icons/preise-icons/group.png" alt="">
                                         </div>
-                                        <p>Familien: 7,– EUR</p>
+                                        <p>Familien: 7,00 EUR</p>
                                    </div>
                                    <div class="preise-icongroup-item">
                                         <div class="preise-icongroup-icon">
@@ -235,14 +237,14 @@
                               </div>
                          </div>
                     </div>
-                    <div class="preise-img col-5 col-offset-1">
+                    <div class="preise-img container__col-5 container__col-offset-1">
                          <img src="../src/assets/pictures/preise.png" alt="">
                     </div>
                </div>
           </section>
-          <section class="anfahrt">
-               <div class="row">
-                    <div class="anfahrt-infos col-5 col-offset-1">
+          <section class="anfahrt container">
+               <div class="container__row">
+                    <div class="anfahrt-infos container__col-10 container__col-sm-8 container__col-md-6 container__col-lg-5 container__col-offset-1">
                          <div class="anfahrt-infos-inner">
                               <div class="anfahrt-bubble">
                                    <img src="../src/assets/pictures/anfahrt.png" alt="">
@@ -256,15 +258,15 @@
                               </div>
                          </div>
                     </div>
-                    <div class="anfahrt-img col-12">
+                    <div class="anfahrt-img container__col-12">
                          <img src="../src/assets/pictures/map.jpg" alt="">
                     </div>
                </div>
           </section>
      </main>
-     <footer class="footer-container text">
-          <div class="footer-inner-top row">
-               <div class="footer-inner-top-left col-6 col-offset-1">
+     <footer class="footer-container text container">
+          <div class="footer-inner-top container__row">
+               <div class="footer-inner-top-left container__col-6 container__col-offset-1">
                <h3>Impressum</h3>
                     <p>
                          Museum NaturPur  <br>
@@ -272,7 +274,7 @@
                          99947 Bad Langensalza
                     </p>
                </div>
-               <div class="footer-inner-top-right col-5">
+               <div class="footer-inner-top-right container__col-5">
                     <p>
                          Vorsitzende: Sieglinde Haufe <br>
                          Direktor: Dr. Robert Richter<br>
@@ -281,8 +283,8 @@
                     </p>
                </div>
           </div>
-          <div class="footer-inner-bottom row">
-               <div class="col-10 col-offset-1 footer-inner-bottom-wrapper">
+          <div class="footer-inner-bottom container__row">
+               <div class="container__col-10 container__col-offset-1 footer-inner-bottom-wrapper">
                     <p class="contact"><a href="#">www.museum-natur-pur.de</a></p>
                     <p class="contact"><a href="mailto:info@museum-natur-pur.de">info@museum-natur-pur.de</a></p>
                     <p class="contact">Tel: 03603/12346</p>
