@@ -49,8 +49,8 @@
                                    content: '';
                                    position: absolute;
                                    left: 0;
-                                   bottom: -.25rem;
-                                   height: 2px;
+                                   bottom: 0;
+                                   height: 1px;
                                    width: 100%;
                                    background-color: $second-color;
                                    transform: translateX(-101%);
@@ -61,7 +61,6 @@
 
                                    &::after {
                                         transform: translateX(0);
-
                                    }
                               }
                          }
