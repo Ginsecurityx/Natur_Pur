@@ -31,7 +31,7 @@ $header-top-margin: 1.5rem;
      .social-container {
           display: none;
 
-          @media all and (min-width: $breakpoint-medium) {
+          @media all and (min-width: $breakpoint-large) {
                z-index: 97;
                display: flex;
                position: relative;
