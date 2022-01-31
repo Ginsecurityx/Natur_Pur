@@ -1,7 +1,7 @@
 .footer-container {
 
      .footer-inner {
-          
+
           &-top {
                display: flex;
                align-items: flex-end;
@@ -47,7 +47,7 @@
                          &:first-child {
                               margin-left: 0;
                          }
-                         
+
                          &:last-child {
                               margin-right: 0;
                          }
@@ -83,7 +83,7 @@
 
           @media screen and (max-width: $breakpoint-medium) {
 
-               
+
                &-top {
                     margin-top: 10rem;
                     padding: 1rem;

@@ -6,10 +6,10 @@ window.onload = function() {
      const bar1 = document.getElementById('burger-bar-1')
      const bar2 = document.getElementById('burger-bar-2')
      const bar3 = document.getElementById('burger-bar-3')
-     
+
      navButton.onclick = function(){navToggle()};
      window.onscroll = function(){navClose()};
-     
+
      function navToggle(){
           //toggle nav
           nav.classList.toggle("open");
@@ -20,7 +20,7 @@ window.onload = function() {
           bar3.classList.toggle("active");
           navButton.classList.toggle("active");
      };
-     
+
      function navClose(){
           //close nav onscroll
           nav.classList.remove("open");
@@ -35,14 +35,19 @@ window.onload = function() {
 
 
      //scroll animations
-     let scrollPos = 0;
-
+     const headerIMG = document.querySelector('.header-img');
      const introductionIMG = document.querySelector('.introduction-img');
      const aktuellesIMG = document.querySelector('.aktuelles-image');
-     const aktuellesBttn = document.querySelector('.aktuelles-button');
+     const aktuellesH2 = document.querySelector('.headline-aktuelles');
      const jahrestagungIMG = document.querySelector('.jahrestagung-img');
+     const infoIMG = document.querySelector('.informationen-img');
+     const infoH2 = document.querySelector('.headline-infos');
+     const darkBttn = document.querySelector('.button-dark');
+     const lightBttn = document.querySelector('.button-light');
+
 
      //scroll Direction
+     let scrollPos = 0;
      function scrollDirection() {
           if ((document.body.getBoundingClientRect()).top > scrollPos) {
                console.log('up')
@@ -52,7 +57,6 @@ window.onload = function() {
           scrollPos = (document.body.getBoundingClientRect()).top;
      }
      window.onscroll = function () {scrollDirection()};
-     
 
      //scroll Detection
      function scrollDetection(top, element) {
@@ -63,11 +67,19 @@ window.onload = function() {
           } else {
                element.classList.remove('show');
           }
-     }    
+     }
 
      //Viewport check
-     function isInViewport(element) {
-          const rect = element.getBoundingClientRect();
+     function viewportCheck(element) {
+          let rect = element.getBoundingClientRect();
+          let y = rect.y;
+          if (y > window.innerHeight) {
+               element.classList.remove('show');
+          } else {
+               setTimeout(function(){
+                    element.classList.add('show');
+               },500);
+          }
           return (
               rect.top >= 0 &&
               rect.left >= 0 &&
@@ -78,18 +90,23 @@ window.onload = function() {
 
 
      //parallax
-     function scrollParallax(element) {
-          const distance = window.scrollY;
-          if(isInViewport(element)) {
-               element.style.transform = `translateY(${distance *-0.2}px)`;
-               console.log('distance' + distance);
-          }
+     function headerParallax(element) {
+          const distance = window.pageYOffset;
+          element.style.transform = `translateY(${distance *-0.3}px)`;
+          console.log('distance' + distance);
      }
-     
+
      window.addEventListener('scroll', function () {
-          scrollDetection(1000, aktuellesIMG);
-          scrollDetection(1500, aktuellesBttn);
-          scrollParallax(introductionIMG);
+          // scrollDetection(1000, aktuellesIMG);
+          // scrollDetection(1500, aktuellesBttn);
+          viewportCheck(aktuellesIMG);
+          viewportCheck(jahrestagungIMG);
+          viewportCheck(darkBttn);
+          viewportCheck(lightBttn);
+          viewportCheck(infoIMG);
+          viewportCheck(aktuellesH2);
+          viewportCheck(infoH2);
+          headerParallax(headerIMG);
      })
      // window.addEventListener('scroll', function () {})
 }
