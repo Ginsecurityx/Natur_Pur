@@ -18,14 +18,12 @@
           display: flex;
           align-items: center;
 
-          img {
+          &-inner {
                max-width: 100%;
-          }
 
-          @media all and (min-width: $breakpoint-large) {
-               img {
+               @media all and (min-width: $breakpoint-large) {
                     max-width: 120%;
-                    transform: translateX(-20%);
+                    transform: translate(-20%, 0);
                }
           }
      }
@@ -67,9 +65,29 @@
      .aktuelles-text{
           margin-top: 3rem;
           order: 3;
+
           .border {
                margin: 0;
           }
+
+          .aktuelles-button {
+
+               button {
+                    transform: translate(-50px, 0);
+                    opacity: 0;
+                    transition: $fast;
+               }
+
+               &.show {
+
+                    button {
+                         transform: translate(0, 0);
+                         opacity: 1;
+                    }
+               }
+          }
+
+
      }
 
      .aktuelles-image {
@@ -78,12 +96,22 @@
           align-items: center;
           order: 2;
 
+          //before animation
+          transform: translate(50%, 0);
+          opacity: 0;
+          transition: $medium;
+
           img {
                max-width: 125%;
           }
 
           @media all and (min-width: $breakpoint-medium) {
                order: 4;
+          }
+
+          &.show {
+               transform: translate(0, 0);
+               opacity: 1;
           }
      }
 
