@@ -33,6 +33,23 @@ window.onload = function() {
      };
 
 
+     //Forms checkbox abfrage
+     function validateCheckbox(form) {
+     
+          const checkboxes = document.querySelector('.tag-checkbox');
+          if (form.tag1.checked || form.tag2.checked) {
+               return true;
+          } else {
+               checkboxes.classList.add('empty');
+               return false;
+          }
+     }
+     
+     const form = document.querySelector('form');
+     if(form) {
+          form.addEventListener('submit', function(){validateCheckbox(form)});
+     }
+
 
      //scroll animations
      const headerIMG = document.querySelector('.header-img');
@@ -96,32 +113,31 @@ window.onload = function() {
           console.log('distance' + distance);
      }
 
+     //call functions onscroll
      window.addEventListener('scroll', function () {
           // scrollDetection(1000, aktuellesIMG);
           // scrollDetection(1500, aktuellesBttn);
-          viewportCheck(aktuellesIMG);
-          viewportCheck(jahrestagungIMG);
-          viewportCheck(darkBttn);
-          viewportCheck(lightBttn);
-          viewportCheck(infoIMG);
-          viewportCheck(aktuellesH2);
-          viewportCheck(infoH2);
+          if (aktuellesIMG) {
+               viewportCheck(aktuellesIMG);
+          }
+          if (jahrestagungIMG) {
+               viewportCheck(jahrestagungIMG);
+          }
+          if (darkBttn) {
+               viewportCheck(darkBttn);
+          }
+          if (lightBttn) {
+               viewportCheck(lightBttn);
+          }
+          if (infoIMG) {
+               viewportCheck(infoIMG);
+          }
+          if (aktuellesH2) {
+               viewportCheck(aktuellesH2);
+          }
+          if (infoH2) {
+               viewportCheck(infoH2);
+          }
           headerParallax(headerIMG);
      })
-     // window.addEventListener('scroll', function () {})
 }
-
-function validateCheckbox(form) {
-
-     const checkboxes = document.querySelector('.tag-checkbox')
-     if (form.tag1.checked || form.tag2.checked) {
-     return true;
-     } else {
-     checkboxes.classList.add('empty');
-     return false;
-     }
-     }
-
-     const form = document.querySelector('form');
-
-     form.onsubmit = function(){validateCheckbox(form)};
