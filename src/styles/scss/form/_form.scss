@@ -1,0 +1,195 @@
+.contact-page {
+    background: $second-color;
+    color: $main-color;
+    overflow-x: hidden;
+}
+
+.formheadline {
+    h2 {
+        text-align: center;
+    }
+}
+
+.form {
+    color: $second-color;
+    max-width: 100%;
+
+    &-wrapper {
+        border-radius: 5rem;
+        background-color: $bg-color;
+        padding: $col-offset;
+        margin-right: $col-offset;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: .6rem .8rem;
+        border-style: solid;
+        border-width: .1rem;
+        border-color: $second-color;
+        border-radius: 15px;
+        border-image: none;
+        background-color: transparent;
+
+        &:focus-visible,
+        &:focus-within,
+        &:focus,
+        &:active {
+            border-color: $ci-color;
+        }
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    &-inner {
+        max-width: 100%;
+    }
+
+    &-item {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+
+        input,
+        select {
+            margin-bottom: .7rem;
+        }
+
+        > * {
+            width: 100%;
+        }
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            input {
+                margin: 0 .3rem 0 0;
+            }
+        }
+    }
+
+    &-radio {
+        position: relative;
+        width: 100%;
+    }
+
+    &-tage {
+        .form-item-inner {
+            padding: .3rem 0;
+        }
+    }
+
+    [type="checkbox"] {
+        border: none;
+        position: relative;
+        left: 15px;
+        top: -4px;
+        z-index: 0;
+        -webkit-appearance: none;
+      }
+
+    [type="checkbox"] + label {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding: .2rem;
+    }
+
+    [type="checkbox"] + label::before {
+        width: 15px;
+        height: 15px;
+        border-radius: 5px;
+        border: 2px solid $second-color;
+        background-color: transparent;
+        display: block;
+        content: "";
+        float: left;
+        margin-right: 5px;
+        z-index: 5;
+        position: relative;
+    }
+
+    [type="checkbox"]:checked+label::before {
+        box-shadow: inset 0px 0px 0px 3px #fff;
+        background-color: $ci-color;
+        border-color: $ci-color;
+    }
+
+    // [type="radio"] {
+    //     border: none;
+    //     position: relative;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: 0;
+    //     -webkit-appearance: none;
+    //   }
+
+    // [type="radio"] + label {
+    //     position: absolute;
+    //     display: flex;
+    //     align-items: center;
+    //     padding: .2rem;
+    //     top: 0;
+    // }
+
+    // [type="radio"] + label::before {
+    //     width: 15px;
+    //     height: 15px;
+    //     border-radius: 50%;
+    //     border: 2px solid $second-color;
+    //     background-color: transparent;
+    //     display: block;
+    //     content: "";
+    //     float: left;
+    //     margin-right: 5px;
+    //     z-index: 5;
+    //     position: relative;
+    // }
+
+    // [type="radio"]:checked+label::before {
+    //     box-shadow: inset 0px 0px 0px 3px #fff;
+    //     background-color: $ci-color;
+    //     border-color: $ci-color;
+    // }
+
+    @media all and (min-width: $breakpoint-large) {
+        &-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-name,
+        &-mail,
+        &-tel,
+        &-institution,
+        &-teilnahme {
+            width: 48%;
+        }
+
+        &-anschrift {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &-strasse {
+            width: 100%;
+        }
+
+        &-plz {
+            width: 28%;
+        }
+
+        &-ort {
+            width: 68%;
+        }
+    }
+}

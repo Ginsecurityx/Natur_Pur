@@ -110,3 +110,18 @@ window.onload = function() {
      })
      // window.addEventListener('scroll', function () {})
 }
+
+function validateCheckbox(form) {
+
+     const checkboxes = document.querySelector('.tag-checkbox')
+     if (form.tag1.checked || form.tag2.checked) {
+     return true;
+     } else {
+     checkboxes.classList.add('empty');
+     return false;
+     }
+     }
+
+     const form = document.querySelector('form');
+
+     form.onsubmit = function(){validateCheckbox(form)};
