@@ -35,19 +35,27 @@ window.onload = function() {
 
      //Forms checkbox abfrage
      function validateCheckbox(form) {
-     
-          const checkboxes = document.querySelector('.tag-checkbox');
-          if (form.tag1.checked || form.tag2.checked) {
-               return true;
+          const checkbox1 = this.tag1;
+          const checkbox2 = this.tag2;
+
+          if (!checkbox1.classList.contains('empty') || !checkbox2.classList.contains('empty')) {
+               if (form.tag1.checked || form.tag2.checked) {
+                    return true;
+               } else {
+                    checkbox1.classList.add('empty');
+                    checkbox2.classList.add('empty');
+                    return false;
+               }
           } else {
-               checkboxes.classList.add('empty');
-               return false;
+               checkbox1.classList.remove('empty');
+               checkbox2.classList.remove('empty');
           }
      }
      
-     const form = document.querySelector('form');
-     if(form) {
-          form.addEventListener('submit', function(){validateCheckbox(form)});
+     const formElement = document.querySelector('form');
+     const formSubmit = document.querySelector('.form-submit');
+     if(formSubmit) {
+          formSubmit.addEventListener('click', function(){validateCheckbox(formElement)});
      }
 
 
