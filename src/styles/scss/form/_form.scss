@@ -14,11 +14,25 @@
     color: $second-color;
     max-width: 100%;
 
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
     &-wrapper {
         border-radius: 5rem;
         background-color: $bg-color;
         padding: $col-offset;
         margin-right: $col-offset;
+    }
+
+    h3 {
+        width: 100%;
     }
 
     input,
@@ -36,6 +50,7 @@
         &:focus-within,
         &:focus,
         &:active {
+            outline: none;
             border-color: $ci-color;
         }
     }
@@ -58,6 +73,11 @@
             margin-bottom: .7rem;
         }
 
+        > label {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
         > * {
             width: 100%;
         }
@@ -73,36 +93,79 @@
         }
     }
 
-    &-radio {
+    &-radio,
+    &-checkbox {
         position: relative;
         width: 100%;
+
+        &-headline {
+            font-weight: 600;
+            text-transform: uppercase;
+            border-bottom: .125rem solid $ci-color;
+        }
     }
 
     &-tage {
-        .form-item-inner {
-            padding: .3rem 0;
+        margin-bottom: 1rem;
+
+        &-headline {
+            font-weight: 600;
+            text-transform: uppercase;
+            border-bottom: .125rem solid $ci-color;
+            width: unset;
         }
     }
 
+    &-seminar {
+        .form-item-inner {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &-kommentar {
+        margin-bottom: 1rem;
+    }
+
+    &-liste-headline {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    &-newsletter {
+        margin: 1rem 0;
+    }
+
+    &-pflichtfeld p{
+        font-size: 1rem;
+        line-height: 1rem;
+        opacity: .7;
+    }
+
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    [type="radio"],
     [type="checkbox"] {
         border: none;
-        position: relative;
-        left: 15px;
-        top: -4px;
+        position: absolute;
+        padding-left: 0;
+        left: 0;
+        top: 0;
         z-index: 0;
         -webkit-appearance: none;
-        
+
         + label {
-            position: absolute;
             display: flex;
             align-items: center;
-            padding: .2rem;
+            padding: .2rem .2rem .2rem 1.5rem;
+            top: 0;
         }
-        
-        + label::before {
+
+        &::before {
             width: 15px;
             height: 15px;
-            border-radius: 5px;
+            border-radius: 50%;
             border: 2px solid $second-color;
             background-color: transparent;
             display: block;
@@ -113,60 +176,18 @@
             position: relative;
         }
 
-        &:checked+label::before {
+        &:checked::before {
             box-shadow: inset 0px 0px 0px 3px #fff;
             background-color: $ci-color;
             border-color: $ci-color;
-            
-        }
-
-        &.empty {
-
-            + label::before { 
-                border: 2px solid red;
-                background-color: red;
-            }
         }
     }
 
-    [type="radio"] {
-        border: none;
-        position: relative;
-        left: 0;
-        top: 0;
-        z-index: 0;
-        -webkit-appearance: none;
-      }
-
-    [type="radio"] + label {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        padding: .2rem;
-        top: 0;
+    [type="checkbox"]::before {
+        border-radius: 5px;
     }
 
-    [type="radio"]::before {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        border: 2px solid $second-color;
-        background-color: transparent;
-        display: block;
-        content: "";
-        float: left;
-        margin-right: 5px;
-        z-index: 5;
-        position: relative;
-    }
-
-    [type="radio"]:checked::before {
-        box-shadow: inset 0px 0px 0px 3px #fff;
-        background-color: $ci-color;
-        border-color: $ci-color;
-    }
-
-    @media all and (min-width: $breakpoint-large) {
+    @media all and (min-width: $breakpoint-medium) {
         &-inner {
             display: flex;
             flex-wrap: wrap;
@@ -190,7 +211,8 @@
         }
 
         &-strasse,
-        &-kommentar {
+        &-kommentar,
+        &-button {
             width: 100%;
         }
 

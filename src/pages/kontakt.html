@@ -118,94 +118,107 @@
                <div class="container__row">
                     <div class="form-wrapper container__col-10 container__col-offset-1">
                          <form action="" method="get" class="form-inner text">
-                              <div class="form-item form-name">
-                                   <label for="vorname">Vorname* </label>
-                                   <input type="text" name="vorname" id="vorname" required>
-                              </div>
-                              <div class="form-item form-name">
-                                   <label for="nachname">Nachname* </label>
-                                   <input type="text" name="nachname" id="nachname" required>
-                              </div>
-                              <div class="form-item form-mail">
-                                   <label for="email">E-Mail* </label>
-                                   <input type="email" name="email" id="email" required>
-                              </div>
-                              <div class="form-item form-tel">
-                                   <label for="tel">Telefonnummer </label>
-                                   <input type="tel" name="tel" id="tel">
-                              </div>
-                              <div class="form-item form-institution">
-                                   <label for="institution">Institution </label>
-                                   <input type="text" name="institution" id="institution">
-                              </div>
-                              <div class="form-item form-teilnahme">
-                                   <label for="teilnahme">Teilnehmen als*</label>
-                                   <select name="teilnahme" id="teilnahme" required>
-                                        <option value="teilnehmer">Teilnehmer:in</option>
-                                        <option value="studierende">Studierende</option>
-                                        <option value="Azubi">Azubi/Referent:in</option>
-                                   </select>
-                              </div>
-                              <div class="form-anschrift">
-                                   <div class="form-item form-strasse">
-                                        <label for="strasse">Straße*</label>
-                                        <input type="text" name="strasse" id="strasse" required>
+                              <fieldset>
+                                   <h3>Angaben zur Person</h3>
+                                   <div class="form-item form-name">
+                                        <label for="vorname">Vorname* </label>
+                                        <input type="text" name="vorname" id="vorname" placeholder="Max" required>
                                    </div>
-                                   <div class="form-item form-plz">
-                                        <label for="plz">Postleitzahl</label>
-                                        <input type="number" name="plz" id="plz" required>
+                                   <div class="form-item form-name">
+                                        <label for="nachname">Nachname* </label>
+                                        <input type="text" name="nachname" id="nachname" placeholder="Mustermann" required>
                                    </div>
-                                   <div class="form-item form-ort">
-                                        <label for="ort">Ort*</label>
-                                        <input type="text" name="ort" id="ort" required>
+                                   <div class="form-item form-mail">
+                                        <label for="email">E-Mail* </label>
+                                        <input type="email" name="email" id="email" placeholder="m.mustermann@muster.de" required>
                                    </div>
-                              </div>
-                              <div class="form-item form-tage">
-                                   <span class="form-tage-headline">Tage*</span>
-                                   <div class="form-item-inner">
-                                        <input type="checkbox" name="tag1" class="tag-checkbox" id="tag1">
-                                        <label for="tag1">Donnerstag, 7. April 2022</label>
+                                   <div class="form-item form-tel">
+                                        <label for="tel">Telefonnummer </label>
+                                        <input type="tel" name="tel" id="tel" placeholder="0123456789">
                                    </div>
-                                   <div class="form-item-inner">
-                                        <input type="checkbox" name="tag2" class="tag-checkbox" id="tag2">
-                                        <label for="tag2">Freitag, 8. April 2022</label>
+                                   <div class="form-item form-institution">
+                                        <label for="institution">Institution </label>
+                                        <input type="text" name="institution" id="institution" placeholder="Musterfirma">
                                    </div>
-                              </div>
-                              <div class="form-item form-seminar">
-                                   <div class="form-item-inner">
-                                        <span class="form-radio-headline">Donnerstag Vormittag</span>
-                                        <div class="form-radio">
-                                             <input type="radio" name="do11" id="cs-do-11" value="cs-do-11">
-                                             <label for="cs-do-11">Do, 07.04. 11:00 Uhr „Citizen Science“</label>
+                                   <div class="form-item form-teilnahme">
+                                        <label for="teilnahme">Teilnehmen als*</label>
+                                        <select name="teilnahme" id="teilnahme" required>
+                                             <option value="teilnehmer">Teilnehmer:in</option>
+                                             <option value="studierende">Studierende</option>
+                                             <option value="Azubi">Azubi/Referent:in</option>
+                                        </select>
+                                   </div>
+                              </fieldset>
+                              <fieldset>
+                                   <h3>Adresse</h3>
+                                   <div class="form-anschrift">
+                                        <div class="form-item form-strasse">
+                                             <label for="strasse">Straße*</label>
+                                             <input type="text" name="strasse" id="strasse" placeholder="Musterstraße" required>
                                         </div>
-                                        <div class="form-radio">
-                                             <input type="radio" name="do11" id="slw-do-11" value="slw-do-11">
-                                             <label for="slw-do-11">Do, 07.04. 11:00 Uhr „Sinne-Ralley im Lebensraum Wald“</label>
+                                        <div class="form-item form-plz">
+                                             <label for="plz">Postleitzahl*</label>
+                                             <input type="number" name="plz" id="plz" placeholder="01234" required>
+                                        </div>
+                                        <div class="form-item form-ort">
+                                             <label for="ort">Ort*</label>
+                                             <input type="text" name="ort" id="ort" placeholder="Musterort" required>
                                         </div>
                                    </div>
-                                   <div class="form-item-inner">
-                                        <span class="form-radio-headline">Donnerstag Nachmittag</span>
-                                        <div class="form-radio">
-                                             <input type="radio" name="do15" id="pk-do-15" value="pk-do-15">
-                                             <label for="pk-do-15">Do, 07.04. 15:00 Uhr „Präventive Konservierung“</label>
+                              </fieldset>
+                              <fieldset>
+                                   <h3>Seminar</h3>
+                                   <div class="form-item form-tage">
+                                        <span class="form-tage-headline">Tage*</span>
+                                        <div class="form-item-inner">
+                                             <div class="form-checkbox">
+                                                  <input type="checkbox" name="tag1" class="tag-checkbox" id="tag1">
+                                                  <label for="tag1">Donnerstag, 7. April 2022</label>
+                                             </div>
                                         </div>
-                                        <div class="form-radio">
-                                             <input type="radio" name="do15" id="dm-do-15" value="dm-do-15">
-                                             <label for="dm-do-15">Do, 07.04. 15:00 Uhr „Digitales Museum“</label>
-                                        </div>
-                                   </div>
-                                   <div class="form-item-inner">
-                                        <span class="form-radio-headline">Freitag Vormittag</span>
-                                        <div class="form-radio">
-                                             <input type="radio" name="fr10" id="dm-fr-10" value="dm-fr-10">
-                                             <label for="dm-fr-10">Fr, 08.04. 10:00 Uhr „Digitales Museum“</label>
-                                        </div>
-                                        <div class="form-radio">
-                                             <input type="radio" name="fr10" id="cs-fr-10" value="cs-fr-10">
-                                             <label for="cs-fr-10">Fr, 08.04. 10:00 Uhr „Citizen Science“ </label>
+                                        <div class="form-item-inner">
+                                             <div class="form-checkbox">
+                                                  <input type="checkbox" name="tag2" class="tag-checkbox" id="tag2">
+                                                  <label for="tag2">Freitag, 8. April 2022</label>
+                                             </div>
                                         </div>
                                    </div>
-                              </div>
+                                   <div class="form-item form-seminar">
+                                        <div class="form-item-inner">
+                                             <span class="form-radio-headline">Donnerstag Vormittag</span>
+                                             <div class="form-radio">
+                                                  <input type="radio" name="do11" id="cs-do-11" value="cs-do-11">
+                                                  <label for="cs-do-11">Do, 07.04. 11:00 Uhr „Citizen Science“</label>
+                                             </div>
+                                             <div class="form-radio">
+                                                  <input type="radio" name="do11" id="slw-do-11" value="slw-do-11">
+                                                  <label for="slw-do-11">Do, 07.04. 11:00 Uhr „Sinne-Ralley im Lebensraum Wald“</label>
+                                             </div>
+                                        </div>
+                                        <div class="form-item-inner">
+                                             <span class="form-radio-headline">Donnerstag Nachmittag</span>
+                                             <div class="form-radio">
+                                                  <input type="radio" name="do15" id="pk-do-15" value="pk-do-15">
+                                                  <label for="pk-do-15">Do, 07.04. 15:00 Uhr „Präventive Konservierung“</label>
+                                             </div>
+                                             <div class="form-radio">
+                                                  <input type="radio" name="do15" id="dm-do-15" value="dm-do-15">
+                                                  <label for="dm-do-15">Do, 07.04. 15:00 Uhr „Digitales Museum“</label>
+                                             </div>
+                                        </div>
+                                        <div class="form-item-inner">
+                                             <span class="form-radio-headline">Freitag Vormittag</span>
+                                             <div class="form-radio">
+                                                  <input type="radio" name="fr10" id="dm-fr-10" value="dm-fr-10">
+                                                  <label for="dm-fr-10">Fr, 08.04. 10:00 Uhr „Digitales Museum“</label>
+                                             </div>
+                                             <div class="form-radio">
+                                                  <input type="radio" name="fr10" id="cs-fr-10" value="cs-fr-10">
+                                                  <label for="cs-fr-10">Fr, 08.04. 10:00 Uhr „Citizen Science“ </label>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </fieldset>
                               <div class="form-item form-kommentar">
                                    <label for="kommentar">Kommentar</label>
                                    <textarea name="kommentar" id="kommentar"></textarea>
@@ -223,13 +236,21 @@
                               </div>
                               <div class="form-item form-newsletter">
                                    <div class="form-item-inner">
-                                        <input type="checkbox" name="newsletter" id="newsletter">
-                                        <label for="newsletter">Ja, ich möchte den Newsletter des Museums Natur Pur erhalten.</label>
+                                        <div class="form-checkbox">
+                                             <input type="checkbox" name="newsletter" id="newsletter">
+                                             <label for="newsletter">Ja, ich möchte den Newsletter des Museums Natur Pur erhalten.</label>
+                                        </div>
                                    </div>
                               </div>
                               <div class="form-item form-button">
-                                   <input type="submit" value="Anmeldung abschicken" class="form-submit">
+                                   <div class="form-button-inner button-dark">
+                                        <button type="submit">
+                                             <div class="arrow"></div>
+                                             <span>Anmeldung abschicken</span>
+                                        </button>
+                                   </div>
                               </div>
+                              <span class="form-pflichtfeld"><p>Mit Stern (*) markierte Felder müssen ausgefüllt werden.</p></span>
                          </form>
                     </div>
                </div>
