@@ -120,42 +120,42 @@
         border-color: $ci-color;
     }
 
-    // [type="radio"] {
-    //     border: none;
-    //     position: relative;
-    //     left: 0;
-    //     top: 0;
-    //     z-index: 0;
-    //     -webkit-appearance: none;
-    //   }
+    [type="radio"] {
+        border: none;
+        position: relative;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        -webkit-appearance: none;
+      }
 
-    // [type="radio"] + label {
-    //     position: absolute;
-    //     display: flex;
-    //     align-items: center;
-    //     padding: .2rem;
-    //     top: 0;
-    // }
+    [type="radio"] + label {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding: .2rem;
+        top: 0;
+    }
 
-    // [type="radio"] + label::before {
-    //     width: 15px;
-    //     height: 15px;
-    //     border-radius: 50%;
-    //     border: 2px solid $second-color;
-    //     background-color: transparent;
-    //     display: block;
-    //     content: "";
-    //     float: left;
-    //     margin-right: 5px;
-    //     z-index: 5;
-    //     position: relative;
-    // }
+    [type="radio"]::before {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid $second-color;
+        background-color: transparent;
+        display: block;
+        content: "";
+        float: left;
+        margin-right: 5px;
+        z-index: 5;
+        position: relative;
+    }
 
-    // [type="radio"]:checked+label::before {
-    //     box-shadow: inset 0px 0px 0px 3px #fff;
-    //     background-color: $ci-color;
-    //     border-color: $ci-color;
-    // }
+    [type="radio"]:checked::before {
+        box-shadow: inset 0px 0px 0px 3px #fff;
+        background-color: $ci-color;
+        border-color: $ci-color;
+    }
 
     @media all and (min-width: $breakpoint-large) {
         &-inner {
@@ -180,7 +180,8 @@
             width: 100%;
         }
 
-        &-strasse {
+        &-strasse,
+        &-kommentar {
             width: 100%;
         }
 
