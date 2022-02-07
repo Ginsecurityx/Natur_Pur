@@ -66,7 +66,7 @@
     &-item {
         display: flex;
         flex-wrap: wrap;
-        max-width: 100%;
+        width: 100%;
 
         input,
         select {
@@ -103,6 +103,13 @@
             text-transform: uppercase;
             border-bottom: .125rem solid $ci-color;
         }
+    }
+
+    &-anschrift {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
     }
 
     &-tage {
@@ -201,13 +208,6 @@
         &-institution,
         &-teilnahme {
             width: 48%;
-        }
-
-        &-anschrift {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
         }
 
         &-strasse,
