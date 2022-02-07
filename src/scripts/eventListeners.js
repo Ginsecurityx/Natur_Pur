@@ -55,11 +55,11 @@ window.onload = function() {
      
      const formElement = document.querySelector('form');
      const formSubmit = document.querySelector('.form-submit');
-     // if(formSubmit) {
+     if(formSubmit) {
           formSubmit.addEventListener('click', function(){validateCheckbox(formElement)});
           formElement.tag1.addEventListener('click', function(){validateCheckbox(formElement)});
           formElement.tag2.addEventListener('click', function(){validateCheckbox(formElement)});
-     // }
+     }
 
 
      //scroll animations
