@@ -46,7 +46,8 @@ window.onload = function() {
                     checkbox2.classList.add('empty');
                     return false;
                }
-          } else {
+          }
+           else {
                checkbox1.classList.remove('empty');
                checkbox2.classList.remove('empty');
           }
@@ -54,9 +55,11 @@ window.onload = function() {
      
      const formElement = document.querySelector('form');
      const formSubmit = document.querySelector('.form-submit');
-     if(formSubmit) {
+     // if(formSubmit) {
           formSubmit.addEventListener('click', function(){validateCheckbox(formElement)});
-     }
+          formElement.tag1.addEventListener('click', function(){validateCheckbox(formElement)});
+          formElement.tag2.addEventListener('click', function(){validateCheckbox(formElement)});
+     // }
 
 
      //scroll animations

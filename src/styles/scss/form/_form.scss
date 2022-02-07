@@ -190,8 +190,18 @@
         }
     }
 
-    [type="checkbox"]::before {
-        border-radius: 5px;
+    [type="checkbox"] {
+        &::before {
+            border-radius: 5px;
+        }
+
+        &.empty {
+
+            &::before { 
+                border: 2px solid red;
+                background-color: red;
+            }
+        }
     }
 
     @media all and (min-width: $breakpoint-medium) {
