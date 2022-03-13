@@ -1,8 +1,6 @@
 @import "./base/fonts";
 @import "./utils/utilities";
 @import "./base/typography";
-@import "./pages/home";
-@import "./pages/lehrpfade";
 @import "./layout/footer";
 @import "./layout/grid";
 @import "./layout/header";
@@ -11,5 +9,8 @@
 @import "./components/border";
 @import "./components/quotes";
 @import "./components/waves";
+@import "./components/sinneralley";
 @import "./base/normalize";
 @import "./form/form";
+@import "./pages/home";
+@import "./pages/lehrpfade";

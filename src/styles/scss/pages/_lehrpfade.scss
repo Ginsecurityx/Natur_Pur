@@ -83,40 +83,40 @@
      }
 }
 
-.l-ralley {
-     background: $bg-color;
-     position: relative;
-     margin-top: 10rem !important;
+// .l-ralley {
+//      background: $bg-color;
+//      position: relative;
+//      margin-top: 10rem !important;
 
-     @media all and (max-width: $breakpoint-medium) {
-          padding-bottom: 8rem;
-     }
+//      @media all and (max-width: $breakpoint-medium) {
+//           padding-bottom: 8rem;
+//      }
 
-     &-plan {
-          margin-top: 4rem;
+//      &-plan {
+//           margin-top: 4rem;
 
-          img {
-               max-width: 100%;
-          }
-     }
+//           img {
+//                max-width: 100%;
+//           }
+//      }
 
-     &-legend {
-          margin-top: 4rem;
-     }
+//      &-legend {
+//           margin-top: 4rem;
+//      }
 
-     &::before {
-          content: '';
-          background: url('../../assets/waves/lehrpfade-ralley.png');
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: translateY(-99%);
-          width: 100%;
-          height: 217px;
-     }
+//      &::before {
+//           content: '';
+//           background: url('../../assets/waves/lehrpfade-ralley.png');
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           transform: translateY(-99%);
+//           width: 100%;
+//           height: 217px;
+//      }
 
-}
+// }
 
-.l-ralley-legend {
-     font-family: $font-cheesecake;
-}
+// .l-ralley-legend {
+//      font-family: $font-cheesecake;
+// }
