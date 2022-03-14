@@ -1,5 +1,9 @@
 .l-ralley {
+<<<<<<< HEAD
     background: $bg-color;
+=======
+    background: $main-color;
+>>>>>>> a9f87367e95a496da65f9f3f1c2b2cb98c7f1a20
     position: relative;
     margin-top: 10rem !important;
 
@@ -82,6 +86,31 @@
             //         }
             //     }
             // }
+        .infoboxen {
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            // padding: 15rem;
+            // background-color: red;
+            // display: none;
+
+            $elements: 5;
+            @for $i from 1 through $elements {
+                &-#{$i} {
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
         }
 
         //controls (später selektoren zu svg klassen ändern)
